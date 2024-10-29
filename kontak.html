@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .about-us {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-us h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .about-us p {
+            text-align: justify;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2 style="color: white;">Akun Game</h2>
+        <!-- Tombol Toggle -->
+        <button class="toggle-button" onclick="toggleNavbar()">☰</button>
+        <!-- Link Navbar -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="jual_beli.html">Akun Game</a>
+            <a href="cek_akun.html">Cek Akun</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Kontak Kami</h2>
+        <p>Hubungi kami melalui form berikut atau email langsung ke <strong>support@irfanganendra.com</strong></p>
+        <form>
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Pesan:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <button type="submit">Kirim Pesan</button>
+        </form>
+    </div>
+    <!-- Informasi Tentang Kami -->
+    <div class="about-us">
+        <h3>Tentang Kami</h3>
+        <p>Kami adalah platform website akun game yang menyediakan layanan terpercaya bagi para gamer. Dengan
+            pengalaman bertahun-tahun di industri ini, kami mengutamakan kepuasan pelanggan dan keamanan transaksi.</p>
+        <p>Misi kami adalah untuk memudahkan setiap orang menemukan akun game yang sesuai dengan keinginan mereka,
+            sambil memberikan pengalaman yang aman dan nyaman. Kami percaya bahwa setiap gamer berhak mendapatkan akses
+            ke akun yang berkualitas tanpa khawatir akan risiko penipuan.</p>
+        <p>Nilai-nilai kami meliputi integritas, kepercayaan, dan komitmen untuk terus meningkatkan layanan kami agar
+            dapat memenuhi kebutuhan para pelanggan dengan baik.</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

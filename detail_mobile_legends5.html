@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Akun Mobile Legends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <h2 style="color: white;">Akun Game</h2>
+        <!-- Tombol Toggle -->
+        <button class="toggle-button" onclick="toggleNavbar()">☰</button>
+        <!-- Link Navbar -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="jual_beli.html">Akun Game</a>
+            <a href="cek_akun.html">Cek Akun</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Detail Akun Mobile Legends</h2>
+
+        <!-- Gambar Utama -->
+        <img src="5.jpeg" alt="Mobile Legends Account" class="account-img">
+
+        <!-- Detail Akun -->
+        <div class="account-details">
+            <div class="detail-item">
+                <span class="detail-label">Level:</span>
+                <span class="detail-value">10</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Hero:</span>
+                <span class="detail-value">2+</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Skin:</span>
+                <span class="detail-value">1+</span>
+            </div>
+            <div class="detail-item">
+                <span class="detail-label">Harga:</span>
+                <span class="detail-value">Rp10,000</span>
+            </div>
+        </div>
+
+        <!-- Tombol Beli -->
+        <button class="buy-button">Beli Sekarang</button>
+
+        <!-- Galeri Gambar Akun -->
+        <h3>Galeri Akun</h3>
+        <div class="gallery">
+            <img src="5.1.jpeg" alt="Level Kolektor" class="gallery-img" onclick="openModal(this)">
+            <img src="5.2.jpeg" alt="Hero favorit" class="gallery-img" onclick="openModal(this)">
+            <img src="5.3.jpeg" alt="statistik" class="gallery-img" onclick="openModal(this)">
+            <img src="5.4.jpeg" alt="Lovers" class="gallery-img" onclick="openModal(this)">
+            <!-- Tambahkan gambar lain sesuai kebutuhan -->
+        </div>
+    </div>
+
+    <!-- Modal untuk Menampilkan Gambar Besar -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Catatan -->
+    <div class="note">
+        <h3>Catatan:</h3>
+        <p>Jika anda tertarik untuk membeli akun ini silakan hubungi di halaman kontak ya.</p>
+    </div>
+
+    <script>
+        function openModal(img) {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImage");
+            const captionText = document.getElementById("caption");
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            captionText.innerHTML = img.alt;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,431 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Navbar dasar */
+.navbar {
+    background-color: #6200ea;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #3700b3;
+    border-radius: 5px;
+}
+
+/* Tambahan untuk tombol toggle */
+.toggle-button {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white;
+}
+
+.nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .toggle-button {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        background-color: #6200ea;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(98, 0, 234, 0.8), rgba(0, 0, 0, 0.5)), url('game-background.jpg') center/cover no-repeat;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+button.cta-button {
+    background-color: #03dac5;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+button.cta-button:hover {
+    background-color: #018786;
+}
+
+/* Section Styling */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Gaya gambar di dalam card */
+.account-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px;
+}
+
+/* Kontainer Flex untuk Card */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Jarak antar card */
+    justify-content: center; /* Tengahkan card secara horizontal */
+}
+
+/* Gaya card */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    max-width: 300px; /* Ukuran maksimal untuk card */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    color: #6200ea;
+    margin-bottom: 8px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+button.buy-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+button.buy-button:hover {
+    background-color: #3700b3;
+}
+
+/* Form Styling */
+form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+form button {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #3700b3;
+}
+
+/* Gaya untuk Tombol Detail Akun */
+.detail-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #0076fd;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.detail-button:hover {
+    background-color: #000000;
+}
+
+/* Gaya untuk Gambar Utama */
+.account-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Gaya Galeri yang Responsif */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Gaya untuk Gambar di Galeri */
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.1);
+}
+
+/* Gaya Modal */
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed; /* Tetap di posisi tetap */
+    z-index: 1000; /* Di atas konten lainnya */
+    left: 0;
+    top: 0;
+    width: 100%; /* Lebar penuh */
+    height: 100%; /* Tinggi penuh */
+    overflow: auto; /* Tambahkan scroll jika perlu */
+    background-color: rgb(0,0,0); /* Latar belakang hitam */
+    background-color: rgba(0,0,0,0.9); /* Dengan transparansi */
+    padding-top: 60px; /* Ruang di bagian atas */
+}
+
+/* Gaya Gambar dalam Modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; /* Lebar maksimum */
+}
+
+/* Gaya untuk Caption Gambar */
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+/* Gaya Tombol Tutup Modal */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Gaya untuk Detail Akun */
+.account-details {
+    background-color: #f9f9f9; /* Latar belakang yang lebih terang */
+    border: 1px solid #ddd; /* Garis batas */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Ruang di dalam */
+    margin-top: 20px; /* Jarak atas */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+}
+
+/* Gaya untuk Item Detail */
+.detail-item {
+    display: flex; /* Flexbox untuk tata letak */
+    justify-content: space-between; /* Ruang antara label dan nilai */
+    margin-bottom: 10px; /* Jarak bawah */
+}
+
+/* Gaya untuk Label dan Nilai */
+.detail-label {
+    font-weight: bold; /* Teks tebal untuk label */
+    color: #333; /* Warna label */
+}
+
+.detail-value {
+    color: #007bff; /* Warna biru untuk nilai */
+}
+
+/* Gaya untuk Tombol Beli */
+.buy-button {
+    background-color: #007bff; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    border: none; /* Menghilangkan garis batas */
+    border-radius: 5px; /* Sudut melengkung */
+    padding: 10px 20px; /* Ruang dalam tombol */
+    cursor: pointer; /* Kursor tangan saat hover */
+    font-size: 16px; /* Ukuran font */
+    margin-top: 20px; /* Spasi di atas tombol */
+    transition: background-color 0.3s; /* Efek transisi warna latar belakang */
+}
+
+.buy-button:hover {
+    background-color: #0056b3; /* Warna saat hover */
+}
+
+/* Gaya untuk Catatan */
+.note {
+    background-color: #f8f9fa; /* Warna latar belakang */
+    border: 1px solid #ddd; /* Garis batas */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Ruang di dalam */
+    margin-top: 20px; /* Jarak atas */
+}
+
+.note h3 {
+    color: #333; /* Warna judul */
+}
+
+.note p {
+    color: #555; /* Warna teks */
+    line-height: 1.5; /* Jarak antar baris */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://wallpapercave.com/wp/wp9978255.jpg'); /* Ganti dengan gambar latar belakang */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e64a19;
+}
+
+/* Fitur Section */
+.features {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.feature-item {
+    margin: 20px 0;
+}
+
+.feature-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #555;
+}
+
+.result {
+    background-color: #f0f8ff;
+    border: 1px solid #007bff;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #007bff;
+}

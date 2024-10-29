@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cek Akun Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h3 {
+            color: #4CAF50;
+            margin-top: 20px;
+        }
+
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <h2 style="color: white;">Akun Game</h2>
+        <!-- Tombol Toggle -->
+        <button class="toggle-button" onclick="toggleNavbar()">☰</button>
+        <!-- Link Navbar -->
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="jual_beli.html">Akun Game</a>
+            <a href="cek_akun.html">Cek Akun</a>
+            <a href="kontak.html">Kontak</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Cek Akun Game</h2>
+        <p>Masukkan detail akun game untuk memverifikasi status dan keamanan akun.</p>
+        <form id="checkAccountForm" onsubmit="return checkAccount(event)">
+            <label for="game">Nama Game:</label>
+            <input type="text" id="game" name="game" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Cek Akun</button>
+        </form>
+
+        <div id="result" class="result" style="display: none;"></div>
+    </div>
+
+    <div class="content">
+        <h2>Artikel tentang Akun Game</h2>
+        <p>Akun game adalah salah satu aset penting bagi para gamer. Di sini, kita akan membahas berbagai jenis akun,
+            tips membeli, dan hal-hal yang perlu diperhatikan saat menggunakan akun game.</p>
+
+        <h3>Jenis-jenis Akun Game</h3>
+        <ul>
+            <li><strong>Akun Gratis:</strong> Akun yang dibuat secara gratis oleh pengguna. Biasanya memiliki level dan
+                item yang terbatas.</li>
+            <li><strong>Akun Premium:</strong> Akun yang biasanya dibeli atau diupgrade, menawarkan akses ke item dan
+                fitur eksklusif.</li>
+            <li><strong>Akun Khusus:</strong> Akun yang memiliki item atau karakter langka, sering kali dijual dengan
+                harga tinggi.</li>
+        </ul>
+
+        <h3>Tips Membeli Akun Game</h3>
+        <p>Berikut adalah beberapa tips untuk membeli akun game dengan aman:</p>
+        <ol>
+            <li><strong>Periksa Reputasi Penjual:</strong> Pastikan penjual memiliki ulasan positif dan reputasi yang
+                baik.</li>
+            <li><strong>Tanya Tentang Akun:</strong> Mintalah informasi detail tentang akun, seperti level, item, dan
+                riwayat akun.</li>
+            <li><strong>Gunakan Platform Terpercaya:</strong> Beli akun melalui platform atau website yang memiliki
+                sistem keamanan yang baik.</li>
+        </ol>
+
+        <h3>Hal-hal yang Perlu Diperhatikan</h3>
+        <p>Ketika menggunakan akun game, perhatikan hal-hal berikut:</p>
+        <ul>
+            <li>Jangan berbagi informasi akun dengan orang lain.</li>
+            <li>Gunakan autentikasi dua faktor jika tersedia untuk meningkatkan keamanan akun.</li>
+            <li>Selalu cek kebijakan penggunaan dari game terkait jual beli akun.</li>
+        </ul>
+
+        <h3>Kesimpulan</h3>
+        <p>Akun game adalah bagian penting dari pengalaman bermain. Dengan memahami jenis-jenis akun, tips membeli, dan
+            hal-hal yang perlu diperhatikan, Anda dapat lebih aman dan nyaman dalam bertransaksi akun game.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script>
+        // Fungsi untuk mengecek akun
+        function checkAccount(event) {
+            event.preventDefault(); // Mencegah form dari reload
+
+            // Ambil nilai dari input
+            const game = document.getElementById('game').value;
+            const username = document.getElementById('username').value;
+
+            // Simulasi pencarian akun (di sini Anda bisa mengganti dengan logika atau API nyata)
+            const mockData = {
+                "Mobile Legends": {
+                    "player1": "Akun aktif dan aman.",
+                    "player2": "Akun sedang dalam proses verifikasi."
+                },
+                "PUBG": {
+                    "gamer1": "Akun tidak ditemukan.",
+                    "gamer2": "Akun aktif dan tidak ada masalah."
+                }
+            };
+
+            // Cek apakah game dan username ada dalam mockData
+            const accountStatus = mockData[game] ? mockData[game][username] : null;
+
+            // Tampilkan hasil
+            const resultDiv = document.getElementById('result');
+            if (accountStatus) {
+                resultDiv.innerHTML = `<strong>Status Akun:</strong> ${accountStatus}`;
+            } else {
+                resultDiv.innerHTML = "<strong>Status Akun:</strong> Harus pakai API kocak.";
+            }
+            resultDiv.style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
